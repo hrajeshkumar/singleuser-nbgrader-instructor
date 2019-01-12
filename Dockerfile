@@ -6,10 +6,10 @@ RUN pip install --upgrade pip
 #Create Exchange directory for nbgrader and make sure all users have permission
 USER root
 # remove existing directory, so we can start fresh
-RUN rm -rf /tmp/exchange
+RUN rm -rf /srv/nbgrader
 # create the exchange directory, with write permissions for everyone
-RUN mkdir -p /tmp/exchange
-RUN chmod -R ugo+rw /tmp/exchange
+RUN mkdir -p /srv/nbgrader/exchange
+RUN chmod -R ugo+rw /srv/nbgrader/exchange
 
 USER $NB_UID
 
