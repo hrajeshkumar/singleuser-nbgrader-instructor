@@ -26,6 +26,7 @@ RUN jupyter nbextension install --sys-prefix --py nbgrader
 RUN jupyter nbextension enable --sys-prefix --py nbgrader
 RUN jupyter serverextension enable --sys-prefix --py nbgrader
 
+USER root
 # Configure container startup
 CMD ["start-singleuser.sh"]
 
