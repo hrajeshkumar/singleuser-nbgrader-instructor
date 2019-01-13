@@ -16,6 +16,9 @@ USER $NB_UID
 # Install nbgrader
 RUN pip install nbgrader
 
+#Install nose, required for auto-grading
+RUN pip install nose
+
 # Create nbgrader profile and add nbgrader config
 COPY nbgrader_config.py /etc/jupyter/
 
